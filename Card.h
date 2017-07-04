@@ -16,7 +16,7 @@
 
 
 //Globals
-enum SUIT{SPADES, HEARTS, CLUBS, DIAMONDS, sCount};
+enum SUIT{SPADES, HEARTS, CLUBS, DIAMONDS};
 enum FACE{ACE=1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN,
                 JACK, QUEEN, KING, fCount};
 
@@ -67,7 +67,7 @@ public:
             case FACE::TEN: return "Ten";
             case FACE::THREE: return "Three";
             case FACE::TWO: return "Two";
-            default: throw std::logic_error("invalid rank");
+            default: throw std::logic_error("invalid face");
         }
     }
     
