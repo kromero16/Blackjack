@@ -12,13 +12,16 @@
 using namespace std;
 
 //User Libraries
-#include "Card.h"
+#include "Deck.h"
 
 //Function Prototypes
 
 //Begin Execution
 int main(int argc, char** argv) {
-
+    Deck aDeck;
+    aDeck.printDeck();
+    
+ 
     
   
     //Exit stage right

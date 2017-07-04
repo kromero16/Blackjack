@@ -10,6 +10,9 @@
 
 //System Libraries
 #include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
 //User Libraries
 #include "Card.h"
@@ -17,13 +20,14 @@
 //Create Deck Class
 class Deck{
 private:
-    //Declare Variables
+    //Declare size variables
     const int DECK_S=52;
     const int SUIT_S=4;
     const int FACE_S=13;
     
     //Card Object to Build Deck
-    Card *card;
+    Card *deck;
+   
     
 public:
     //Constructor
@@ -34,6 +38,13 @@ public:
     
     //Accessors
     void printDeck();
+    void printRanks();
+    
+    
+    //Mutators
+   
+ 
+    
     
 };
 
