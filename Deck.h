@@ -26,24 +26,23 @@ private:
     const int FACE_S=13;
     
     //Card Object to Build Deck
-    Card *deck;
+    Card *aCard;
+
    
     
 public:
     //Constructor
     Deck();
-    
+
     //Deconstructor
     ~Deck();
     
     //Accessors
     void printDeck();
-    void printRanks();
-    
-    
+
+
     //Mutators
-   
- 
+
     
     
 };

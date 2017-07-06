@@ -15,72 +15,35 @@
 #include <stdexcept>
 
 
-//Globals
+//Enums
 enum SUIT{SPADES, HEARTS, CLUBS, DIAMONDS};
 enum FACE{ACE=1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN,
                 JACK, QUEEN, KING, fCount};
-
 
 //Create Card Class
 class Card{
 private:
     SUIT m_suit;        //Holds current suit
     FACE m_face;        //Holds current face
-   
+    
 public:             
 
-    //Default Constructor
+    //Constructors
+    Card();
+    Card(FACE const&,SUIT const&);
     Card(int);
     
     //Mutators
-    void setFace(FACE f){
-        m_face=f;
-    }
+    void setFace(FACE f){m_face=f;}
+    void setSuit(SUIT s){m_suit=s;}
     
-    void setSuit(SUIT s){
-       m_suit=s;
-    } 
-    
-    //Get value of face 
-    FACE getFace(){
-        return m_face;
-    }
- 
-    //Get value of suit
-    SUIT getSuit(){
-        return m_suit;
-    }
-    
-    //Convert face to string
-    std::string getFace(FACE f){
-        switch(f){
-            case FACE::ACE: return "Ace";
-            case FACE::EIGHT: return "Eight";
-            case FACE::FIVE: return "Five";
-            case FACE::FOUR: return "Four";
-            case FACE::JACK: return "Jack";
-            case FACE::KING: return "King";
-            case FACE::NINE: return "Nine";
-            case FACE::QUEEN: return "Queen";
-            case FACE::SEVEN: return "Seven";
-            case FACE::SIX: return "Six";
-            case FACE::TEN: return "Ten";
-            case FACE::THREE: return "Three";
-            case FACE::TWO: return "Two";
-            default: throw std::logic_error("invalid face");
-        }
-    }
-    
-    //Convert suit to string
-    std::string getSuit(SUIT s){
-        switch(s){
-            case SUIT::CLUBS: return "Clubs";
-            case SUIT::DIAMONDS: return "Diamonds";
-            case SUIT::HEARTS: return "Hearts";
-            case SUIT::SPADES: return "Spades";
-            default: throw std::logic_error("invalid suit");
-        }
-    }
+    //Accessors 
+    FACE getFace() const{return m_face;}
+    SUIT getSuit() const{return m_suit;}
+  
+    //To string functions
+    std::string toString(FACE const&);
+    std::string toString(SUIT const&);
    
    
     
