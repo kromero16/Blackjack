@@ -19,10 +19,8 @@ using namespace std;
 
 //Begin Execution
 int main(int argc, char** argv) {
-    Deck aDeck;
-    aDeck.printDeck();
-    
-  
+    Deck deck;
+    deck.printDeck();
     //Exit stage right
     return 0;
 }

@@ -27,6 +27,11 @@ Card::Card(int i){
     this->setFace(static_cast<FACE>(i%fCount));
 }
 
+//Get card number value
+int Card::getCardVal(){
+    return (this->m_face*this->m_suit);
+}
+
 //Implement toString
 std::string Card::toString(FACE const&f){
     switch(f){

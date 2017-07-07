@@ -21,28 +21,26 @@ using namespace std;
 class Deck{
 private:
     //Declare size variables
-    const int DECK_S=52;
-    const int SUIT_S=4;
-    const int FACE_S=13;
+    static const int DECK_S=52;
+    static const int SUIT_S=4;
+    static const int FACE_S=13;
     
-    //Card Object to Build Deck
+    //Card to build deck
     Card *aCard;
-
    
-    
+ 
 public:
     //Constructor
     Deck();
-
+    
     //Deconstructor
     ~Deck();
     
     //Accessors
     void printDeck();
-
-
+   
     //Mutators
-
+    void fillDeck();
     
     
 };
