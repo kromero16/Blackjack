@@ -32,22 +32,29 @@ int Card::getCardVal(){
     return (this->m_face*this->m_suit);
 }
 
+//return given card as string
+std::string Card::getCurrentCard(const FACE& f, const SUIT& s){
+    std::string str;
+    str=this->toString(f)+" of "+this->toString(s);
+    return str;
+}
+
 //Implement toString
 std::string Card::toString(FACE const&f){
     switch(f){
         case FACE::ACE:     return "Ace";
-        case FACE::EIGHT:   return "Eight";
-        case FACE::FIVE:    return "Five";
-        case FACE::FOUR:    return "Four";
-        case FACE::JACK:    return "Jack";
-        case FACE::KING:    return "King";
-        case FACE::NINE:    return "Nine";
-        case FACE::QUEEN:   return "Queen";
-        case FACE::SEVEN:   return "Seven";
-        case FACE::SIX:     return "Six";
-        case FACE::TEN:     return "Ten";
-        case FACE::THREE:   return "Three";
         case FACE::TWO:     return "Two";
+        case FACE::THREE:   return "Three";
+        case FACE::FOUR:    return "Four";
+        case FACE::FIVE:    return "Five";
+        case FACE::SIX:     return "Six";
+        case FACE::SEVEN:   return "Seven";
+        case FACE::EIGHT:   return "Eight";
+        case FACE::NINE:    return "Nine";
+        case FACE::TEN:     return "Ten";
+        case FACE::JACK:    return "Jack";
+        case FACE::QUEEN:   return "Queen";
+        case FACE::KING:    return "King";
         default: throw std::logic_error("invalid face");
    }
 }

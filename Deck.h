@@ -17,7 +17,7 @@ using namespace std;
 //User Libraries
 #include "Card.h"
 
-//Create Deck Class
+//Create Deck Class using array of Cards
 class Deck{
 private:
     //Declare size variables
@@ -27,7 +27,9 @@ private:
     
     //Card to build deck
     Card *aCard;
-   
+  
+    
+    
  
 public:
     //Constructor
@@ -41,6 +43,8 @@ public:
    
     //Mutators
     void fillDeck();
+    void shuffleDeck();
+ 
     
     
 };

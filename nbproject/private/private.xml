@@ -9,7 +9,9 @@
         <group>
             <file>file:/home/kevin/NetBeansProjects/Blackjack/Blackjack/main.cpp</file>
             <file>file:/home/kevin/NetBeansProjects/Blackjack/Blackjack/Deck.cpp</file>
+            <file>file:/home/kevin/NetBeansProjects/Blackjack/Blackjack/Card.h</file>
             <file>file:/home/kevin/NetBeansProjects/Blackjack/Blackjack/Deck.h</file>
+            <file>file:/home/kevin/NetBeansProjects/Blackjack/Blackjack/Card.cpp</file>
         </group>
     </open-files>
 </project-private>

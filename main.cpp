@@ -21,6 +21,8 @@ using namespace std;
 int main(int argc, char** argv) {
     Deck deck;
     deck.printDeck();
+
+    
     //Exit stage right
     return 0;
 }

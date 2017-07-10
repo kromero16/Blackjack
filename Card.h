@@ -18,7 +18,7 @@
 //Enums
 enum SUIT{SPADES=1, HEARTS, CLUBS, DIAMONDS};
 enum FACE{ACE=1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, 
-                TEN,JACK, QUEEN, KING, fCount};
+                TEN, JACK, QUEEN, KING, fCount};
 
 //Create Card Class
 class Card{
@@ -41,7 +41,8 @@ public:
     FACE getFace() const{return m_face;}
     SUIT getSuit() const{return m_suit;}
     int getCardVal();
-  
+    std::string getCurrentCard(FACE const&,SUIT const&);
+ 
     //To string functions
     std::string toString(FACE const&);
     std::string toString(SUIT const&);
