@@ -42,6 +42,7 @@ void Deck::fillVec(){
      for(int i=1;i<FACE_S+1;i++){
         for(int j=1;j<SUIT_S+1;j++){
             aDeck.push_back(aCard->getGivenCard(static_cast<FACE>(i),static_cast<SUIT>(j)));
+            defaultDeck.push_back(aCard->getGivenCard(static_cast<FACE>(i),static_cast<SUIT>(j)));
         }
     }
 }

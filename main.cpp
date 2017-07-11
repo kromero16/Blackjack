@@ -20,7 +20,13 @@ using namespace std;
 //Begin Execution
 int main(int argc, char** argv) {
     Deck deck;
+    cout<<"*******SHUFFLING DECK*********\n\n";
     deck.shuffleDeck();
+    cout<<"********PRINTING**********\n\n\n";
+    deck.printVec();
+    cout<<"*******SHUFFLING DECK*********\n\n\n\n";
+    deck.shuffleDeck();
+    cout<<"********PRINTING*********\n\n\n\n";
     deck.printVec();
     
     //Exit stage right
