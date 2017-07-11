@@ -27,11 +27,9 @@ private:
     
     //Card to build deck
     Card *aCard;
+    vector<string> aDeck;
   
-    
-    
- 
-public:
+public: 
     //Constructor
     Deck();
     
@@ -40,10 +38,13 @@ public:
     
     //Accessors
     void printDeck();
+    void printVec();
+    
    
     //Mutators
     void fillDeck();
     void shuffleDeck();
+    void fillVec();
  
     
     

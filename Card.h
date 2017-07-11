@@ -41,7 +41,7 @@ public:
     FACE getFace() const{return m_face;}
     SUIT getSuit() const{return m_suit;}
     int getCardVal();
-    std::string getCurrentCard(FACE const&,SUIT const&);
+    std::string getGivenCard(FACE const&,SUIT const&);
  
     //To string functions
     std::string toString(FACE const&);

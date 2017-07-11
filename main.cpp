@@ -20,8 +20,8 @@ using namespace std;
 //Begin Execution
 int main(int argc, char** argv) {
     Deck deck;
-    deck.printDeck();
-
+    deck.shuffleDeck();
+    deck.printVec();
     
     //Exit stage right
     return 0;
