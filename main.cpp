@@ -20,20 +20,11 @@ using namespace std;
 //Begin Execution
 int main(int argc, char** argv) {
     Deck deck;
-    string str;
-    cout<<"*******SHUFFLING DECK*********\n\n";
-    //deck.shuffleDeck();
-    cout<<"********PRINTING**********\n\n\n";
-    //deck.printVec();
-    cout<<"\n\n&&&&&&&DEALING A CARD ##########\n\n";
-    //str=deck.dealCard();
-    cout<<"********PRINTING**********\n\n\n";
-    //deck.printVec();
+
+ 
     deck.printDeck();
     
-    //cout<<"\n\n Card Dealt \n\n";
-    //cout<<str<<"\n";
- 
+   
     
     //Exit stage right
     return 0;

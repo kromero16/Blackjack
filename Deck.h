@@ -28,7 +28,7 @@ private:
     //Card to build deck
     Card *aCard;
     vector<string> defaultDeck;
-    vector<Card> aDeck;
+    vector<Card *> aDeck;
    
 public: 
     //Constructor
@@ -38,15 +38,11 @@ public:
     ~Deck();
     
     //Accessors
-    void printVec();
     void printDeck();
-    std::string dealCard();
     
    
     //Mutators
-    void shuffleDeck();
     void fillDeck();
-    void fillVec();
  
     
     
