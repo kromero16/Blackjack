@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     Deck deck;
 
  
-    deck.printDeck();
+    deck.printVec();
     
    
     
