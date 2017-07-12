@@ -27,6 +27,8 @@ private:
     
     //Card to build deck
     Card *aCard;
+    
+    //vector of cards
     vector<Card *> aDeck;
    
 public: 
@@ -39,10 +41,12 @@ public:
     //Accessors
     void printDeck();
     void printVec();
+    Card *dealCard();
     
    
     //Mutators
     void fillDeck();
+    void shuffleDeck();
  
     
     

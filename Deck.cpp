@@ -13,6 +13,17 @@ Deck::Deck(){
     this->fillDeck();
 }
 
+Card* Deck::dealCard(){
+    aDeck.pop_back();
+    return aDeck.back();
+}
+
+//Shuffle the deck
+void Deck::shuffleDeck(){
+    std::random_shuffle(aDeck.begin(),aDeck.end());
+}
+
+//Print vector of pointer to card objects
 void Deck::printVec(){
     vector<Card *>::const_iterator it=aDeck.begin();
     for(it;it!=aDeck.end();++it){
