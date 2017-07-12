@@ -28,8 +28,8 @@ Card::Card(int i){
 }
 
 //Get card number value
-int Card::getCardVal(){
-    return (this->m_face*this->m_suit);
+int Card::getCardVal(FACE const& f){
+    return (static_cast<int>(f));
 }
 
 //return given card as string

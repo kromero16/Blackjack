@@ -28,8 +28,8 @@ private:
     //Card to build deck
     Card *aCard;
     vector<string> defaultDeck;
-    vector<string> aDeck;
-  
+    vector<Card> aDeck;
+   
 public: 
     //Constructor
     Deck();
@@ -38,8 +38,9 @@ public:
     ~Deck();
     
     //Accessors
-    void printDeck();
     void printVec();
+    void printDeck();
+    std::string dealCard();
     
    
     //Mutators

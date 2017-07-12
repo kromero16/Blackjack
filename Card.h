@@ -40,7 +40,7 @@ public:
     //Accessors 
     FACE getFace() const{return m_face;}
     SUIT getSuit() const{return m_suit;}
-    int getCardVal();
+    int getCardVal(FACE const&);
     std::string getGivenCard(FACE const&,SUIT const&);
  
     //To string functions
