@@ -30,7 +30,6 @@ private:
     
     //vector of cards
     vector<Card *> aDeck;
-    vector<Card *> dltCards;
    
 public: 
     //Constructor
@@ -41,7 +40,7 @@ public:
     
     //Accessors
     void printDeck();
-    void printVec();
+    void prntVecOfCards();
     Card *dealCard();
     
    

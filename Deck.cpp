@@ -11,24 +11,13 @@
 //Implement Constructor
 Deck::Deck(){
     this->fillDeck();
-}
-
-void Deck::printDlt(){
-    vector<Card *>::const_iterator it=dltCards.begin();
-    for(it;it!=dltCards.end();++it){
-        cout<<(*it)->getGivenCard((*it)->getFace(),(*it)->getSuit());
-    }
-}
-
-void Deck::pushDealt(Card *c){
-    dltCards.push_back(c);
+    this->shuffleDeck();
 }
 
 Card *Deck::dealCard(){
     Card *d=new Card();
     d=aDeck.back();
     aDeck.pop_back();
-    this->pushDealt(d);
     return d;
 }
 
@@ -38,7 +27,7 @@ void Deck::shuffleDeck(){
 }
 
 //Print vector of pointer to card objects
-void Deck::printVec(){
+void Deck::prntVecOfCards(){
     vector<Card *>::const_iterator it=aDeck.begin();
     for(it;it!=aDeck.end();++it){
         cout<<(*it)->getGivenCard((*it)->getFace(),(*it)->getSuit())<<" \n";
