@@ -26,9 +26,11 @@ public:
     
     //Accessors
     void printHand();
+    int getNumCards(){return m_hand.size();}
     
     //Mutators
     void drawCard();
+    void addCard(Card *);
 
 };
 
