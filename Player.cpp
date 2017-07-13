@@ -12,7 +12,15 @@
 
 //Implement Default Constructor
 Player::Player(){
-    
+    this->firstDeal();
+    this->isBust();
+}
+
+//Det. if player bust
+bool Player::isBust(){
+    if(handScore>21)
+        return true;
+    return false;
 }
 
 //Get total hand score

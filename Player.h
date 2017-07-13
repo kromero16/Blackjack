@@ -21,13 +21,13 @@ private:
     Deck aDeck;
     Hand aHand;
     int handScore;
+    bool bust;
     
 public:
     //Default Constructor
     Player();
     
     //Constructor
-    
     
     //Mutators
     void hit();
@@ -36,6 +36,7 @@ public:
     //Accessors
     void prntHand();
     int getTotScore();
+    bool isBust();
     
 };
 

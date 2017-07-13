@@ -18,10 +18,7 @@ using namespace std;
 
 //Begin Execution
 int main(int argc, char** argv) {
-    Player p1;
-    p1.firstDeal();
-    p1.prntHand();
-    cout<<"Hand Score: "<<p1.getTotScore()<<" \n";
+   
     
 
     
