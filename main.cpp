@@ -12,13 +12,19 @@
 using namespace std;
 
 //User Libraries
-#include "Player.h"
+#include "Dealer.h"
 
 //Function Prototypes
 
 //Begin Execution
 int main(int argc, char** argv) {
-   
+    Dealer house;
+    cout<<"Dealer Cards: \n";
+    house.prntDealerHand();
+    cout<<"Dealer Hitting....\n";
+    house.hit();
+    cout<<"\n\nDealer Hand: \n";
+    house.prntDealerHand();
     
 
     

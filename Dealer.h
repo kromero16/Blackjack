@@ -14,12 +14,22 @@
 #include "Card.h"
 #include "Deck.h"
 #include "Hand.h"
+#include "Player.h"
 
 //Create class
-class Dealer{
+class Dealer: public Player{
 private:
-    
+   
 public:
+    //Default Constructor
+    Dealer();
+    
+    //Handle game logic
+    void game(Player);
+    
+    //Print dealer hand
+    void prntDealerHand();
+    
     
 };
 

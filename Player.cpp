@@ -16,6 +16,11 @@ Player::Player(){
     this->isBust();
 }
 
+//default win
+bool Player::winBJ(){
+    return (aHand.getHandTotal()==21 && aHand.getNumCards() == 2);
+}
+
 //Det. if player bust
 bool Player::isBust(){
     if(handScore>21)

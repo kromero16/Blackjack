@@ -9,3 +9,35 @@
 
 //User Libraries
 #include "Dealer.h"
+
+//Implement default constructor
+Dealer::Dealer() : Player(){
+    
+}
+
+//Print dealer hand
+void Dealer::prntDealerHand(){
+    aHand.printHand();
+}
+
+//Implement gameplay
+void Dealer::game(Player p){
+    while(aHand.getHandTotal() <= 21){
+        aHand.printHand();
+        cout<<"\n";
+        
+        if(aHand.getHandTotal() > p.getTotScore() && aHand.getHandTotal() <= 21){
+            cout<<"The House Wins! \n";
+            return;
+        }
+        if(aHand.getHandTotal() == p.getTotScore()){
+            cout<<"Tied! \n";
+            return;
+        }
+        this->hit();
+    }
+    if(aHand.getHandTotal() > 21){
+        cout<<"House Busted! You Won! \n";
+        return;
+    }
+}

@@ -17,7 +17,7 @@
 
 //Create player class
 class Player{
-private:
+protected:
     Deck aDeck;
     Hand aHand;
     int handScore;
@@ -37,6 +37,7 @@ public:
     void prntHand();
     int getTotScore();
     bool isBust();
+    bool winBJ();
     
 };
 
