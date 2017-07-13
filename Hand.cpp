@@ -24,10 +24,14 @@ void Hand::printHand(){
     }
 }
 
+void Hand::initDraw(Card* c, Card* c2){
+    
+}
+
 //Draw card from deck to hand
 void Hand::drawCard(){
     Card *crd=new Card();
-    crd=aDeck.dealCard();
+    //crd=aDeck.dealCard();
     m_hand.push_back(crd);
 }
 

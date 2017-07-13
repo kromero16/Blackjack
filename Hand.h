@@ -9,6 +9,8 @@
 #define HAND_H
 
 //System Libraries
+#include <vector>
+using namespace std;
 
 //User Libraries
 #include "Card.h"
@@ -18,7 +20,7 @@
 class Hand{
 private:
     vector<Card *> m_hand;
-    Deck aDeck;
+    int total;
     
 public:
     //Constructor
@@ -27,8 +29,10 @@ public:
     //Accessors
     void printHand();
     int getNumCards(){return m_hand.size();}
+    int getHandTotal(){return total;}
     
     //Mutators
+    void initDraw(Card *,Card *);
     void drawCard();
     void addCard(Card *);
 
