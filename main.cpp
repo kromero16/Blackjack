@@ -19,6 +19,11 @@ using namespace std;
 //Begin Execution
 int main(int argc, char** argv) {
     Hand aHand;
+    aHand.drawCard();
+    aHand.drawCard();
+    aHand.drawCard();
+    cout<<"\n\nDEALT CARDS: \n";
+    aHand.printHand();
 
     
     //Exit stage right

@@ -14,6 +14,7 @@ Deck::Deck(){
     this->shuffleDeck();
 }
 
+//Deal a card from the deck
 Card *Deck::dealCard(){
     Card *d=new Card();
     d=aDeck.back();
