@@ -29,7 +29,12 @@ Card::Card(int i){
 
 //Get card number value
 int Card::getCardVal(FACE const& f){
-    return (static_cast<int>(f));
+    switch(static_cast<int>(f)){
+        case(static_cast<int>(FACE::JACK)):  return static_cast<int>(FACE::TEN);
+        case(static_cast<int>(FACE::QUEEN)): return static_cast<int>(FACE::TEN);
+        case(static_cast<int>(FACE::KING)):  return static_cast<int>(FACE::TEN);
+        default:                             return static_cast<int>(f);
+    }
 }
 
 //return given card as string

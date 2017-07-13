@@ -15,6 +15,15 @@ Hand::Hand(){
     
 }
 
+//Calculate hand total
+int Hand::getHandTotal(){
+    vector<Card *>::const_iterator it=m_hand.begin();
+    for(it;it!=m_hand.end();++it){
+        handTotal+=(*it)->getCardVal((*it)->getFace());
+    }
+    return handTotal;
+}
+
 //print the hand
 void Hand::printHand(){
     vector<Card *>::const_iterator it=m_hand.begin();
@@ -24,17 +33,13 @@ void Hand::printHand(){
     }
 }
 
+//Draw 2 cards to start round
 void Hand::initDraw(Card* c, Card* c2){
-    
+    m_hand.push_back(c);
+    m_hand.push_back(c2);
 }
 
-//Draw card from deck to hand
-void Hand::drawCard(){
-    Card *crd=new Card();
-    //crd=aDeck.dealCard();
-    m_hand.push_back(crd);
-}
-
+//Add a card to hand
 void Hand::addCard(Card *c){
     m_hand.push_back(c);
 }

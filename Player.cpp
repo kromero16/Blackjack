@@ -12,8 +12,23 @@
 
 //Implement Default Constructor
 Player::Player(){
- 
-   
+    
+}
+
+//Get total hand score
+int Player::getTotScore(){
+    handScore=aHand.getHandTotal();
+    return handScore;
+}
+
+//Print cards in hand
+void Player::prntHand(){
+    aHand.printHand();
+}
+
+//Implement Constructor
+void Player::firstDeal(){
+    aHand.initDraw(aDeck.dealCard(),aDeck.dealCard());
 }
 
 void Player::hit(){

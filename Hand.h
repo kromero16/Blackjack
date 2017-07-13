@@ -20,7 +20,7 @@ using namespace std;
 class Hand{
 private:
     vector<Card *> m_hand;
-    int total;
+    int handTotal;
     
 public:
     //Constructor
@@ -29,11 +29,10 @@ public:
     //Accessors
     void printHand();
     int getNumCards(){return m_hand.size();}
-    int getHandTotal(){return total;}
+    int getHandTotal();
     
     //Mutators
     void initDraw(Card *,Card *);
-    void drawCard();
     void addCard(Card *);
 
 };

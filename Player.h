@@ -23,13 +23,19 @@ private:
     int handScore;
     
 public:
-    //Constructor
+    //Default Constructor
     Player();
+    
+    //Constructor
+    
     
     //Mutators
     void hit();
+    void firstDeal();       //Deals 2 cards to start round
     
     //Accessors
+    void prntHand();
+    int getTotScore();
     
 };
 
