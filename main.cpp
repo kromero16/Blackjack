@@ -20,10 +20,12 @@ using namespace std;
 //Begin Execution
 int main(int argc, char** argv) {
     Deck deck;
-    cout<<"BEFORE SHUFFLING \n";
     deck.printVec();
-    deck.shuffleDeck();
-    cout<<"AFTER SHUFFLING \n\n\n";
+    deck.dealCard();
+    cout<<"\nCard that was dealt: ";
+    deck.printDlt();
+    cout<<"\n\n";
+    cout<<"\nPrinting the deck after dealing: \n";
     deck.printVec();
     
    

@@ -13,9 +13,23 @@ Deck::Deck(){
     this->fillDeck();
 }
 
-Card* Deck::dealCard(){
+void Deck::printDlt(){
+    vector<Card *>::const_iterator it=dltCards.begin();
+    for(it;it!=dltCards.end();++it){
+        cout<<(*it)->getGivenCard((*it)->getFace(),(*it)->getSuit());
+    }
+}
+
+void Deck::pushDealt(Card *c){
+    dltCards.push_back(c);
+}
+
+Card *Deck::dealCard(){
+    Card *d=new Card();
+    d=aDeck.back();
     aDeck.pop_back();
-    return aDeck.back();
+    this->pushDealt(d);
+    return d;
 }
 
 //Shuffle the deck

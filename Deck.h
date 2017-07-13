@@ -30,6 +30,7 @@ private:
     
     //vector of cards
     vector<Card *> aDeck;
+    vector<Card *> dltCards;
    
 public: 
     //Constructor
@@ -47,7 +48,8 @@ public:
     //Mutators
     void fillDeck();
     void shuffleDeck();
- 
+    void pushDealt(Card *);
+    void printDlt();
     
     
 };
