@@ -18,13 +18,22 @@ using namespace std;
 
 //Begin Execution
 int main(int argc, char** argv) {
+    //Create player and house
+    Player user;
     Dealer house;
-    cout<<"Dealer Cards: \n";
+    
+    //Print both user's hands
+    cout<<"Your Hand: ";
+    user.prntHand();
+    cout<<" \n\n";
+    cout<<"Your Hand Total: "
+        <<user.getTotScore()<<"\n";
+    
+    cout<<"Dealer Hand: ";
     house.prntDealerHand();
-    cout<<"Dealer Hitting....\n";
-    house.hit();
-    cout<<"\n\nDealer Hand: \n";
-    house.prntDealerHand();
+    cout<<" \n\n";
+    cout<<"Dealer Hand Total: "
+            <<house.getTotScore()<<"\n";
     
 
     

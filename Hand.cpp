@@ -29,7 +29,7 @@ void Hand::printHand(){
     vector<Card *>::const_iterator it=m_hand.begin();
     for(it;it!=m_hand.end();++it){
         cout<<(*it)->getGivenCard((*it)->getFace(),(*it)->getSuit());
-        cout<<" \n";
+        cout<<" ";
     }
 }
 
