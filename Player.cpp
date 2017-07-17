@@ -41,9 +41,9 @@ void Player::prntHand(){
 
 //Implement Constructor
 void Player::firstDeal(){
-    aHand.initDraw(aDeck.dealCard(),aDeck.dealCard());
+    aHand.initDraw(this->aDeck.dealCard(),this->aDeck.dealCard());
 }
 
 void Player::hit(){
-    aHand.addCard(aDeck.dealCard());
+    aHand.addCard(this->aDeck.dealCard());
 }

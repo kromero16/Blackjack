@@ -26,14 +26,14 @@ int main(int argc, char** argv) {
     cout<<"Your Hand: ";
     user.prntHand();
     cout<<" \n\n";
-    cout<<"Your Hand Total: "
-        <<user.getTotScore()<<"\n";
-    
-    cout<<"Dealer Hand: ";
+    cout<<"Hand Score: "<<user.getTotScore();
+    cout<<"\n\n";
+    cout<<"\nDealer Hand: ";
     house.prntDealerHand();
-    cout<<" \n\n";
-    cout<<"Dealer Hand Total: "
-            <<house.getTotScore()<<"\n";
+    cout<<"\n\n";
+    cout<<"House Score: "<<house.getTotScore();
+    cout<<"\n\n";
+            
     
 
     
