@@ -29,7 +29,7 @@ bool Player::isBust(){
 }
 
 //Get total hand score
-int Player::getTotScore(){
+const int Player::getTotScore(){
     handScore=aHand.getHandTotal();
     return handScore;
 }

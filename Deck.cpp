@@ -12,6 +12,10 @@
 Deck::Deck(){
     this->fillDeck();
     this->shuffleDeck();
+    this->shuffleDeck();
+    this->shuffleDeck();
+    this->shuffleDeck();
+    this->shuffleDeck();
 }
 
 //Deal a card from the deck

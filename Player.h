@@ -20,8 +20,8 @@ class Player{
 protected:
     Deck aDeck;
     Hand aHand;
-    int handScore;
     bool bust;
+    int handScore;
     
 public:
     //Default Constructor
@@ -35,7 +35,7 @@ public:
     
     //Accessors
     void prntHand();
-    int getTotScore();
+    const int getTotScore();
     bool isBust();
     bool winBJ();
     
