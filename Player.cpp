@@ -12,26 +12,25 @@
 
 //Implement Default Constructor
 Player::Player(){
-    this->firstDeal();
+    //this->firstDeal();
     this->isBust();
 }
 
 //default win
 bool Player::winBJ(){
-    return (aHand.getHandTotal()==21 && aHand.getNumCards() == 2);
+    return (this->aHand.getHandTotal()==21 && this->aHand.getNumCards() == 2);
 }
 
 //Det. if player bust
 bool Player::isBust(){
-    if(handScore>21)
+    if(aHand.getHandTotal()>21)
         return true;
     return false;
 }
 
 //Get total hand score
 const int Player::getTotScore(){
-    handScore=aHand.getHandTotal();
-    return handScore;
+    return aHand.getHandTotal();
 }
 
 //Print cards in hand
@@ -46,4 +45,8 @@ void Player::firstDeal(){
 
 void Player::hit(){
     aHand.addCard(this->aDeck.dealCard());
+}
+
+void Player::viewDeck(){
+    aDeck.prntVecOfCards();
 }

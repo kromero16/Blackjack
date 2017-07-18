@@ -21,7 +21,6 @@ protected:
     Deck aDeck;
     Hand aHand;
     bool bust;
-    int handScore;
     
 public:
     //Default Constructor
@@ -38,6 +37,7 @@ public:
     const int getTotScore();
     bool isBust();
     bool winBJ();
+    void viewDeck();
     
 };
 

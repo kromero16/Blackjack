@@ -11,16 +11,12 @@
 //Implement Constructor
 Deck::Deck(){
     this->fillDeck();
-    this->shuffleDeck();
-    this->shuffleDeck();
-    this->shuffleDeck();
-    this->shuffleDeck();
-    this->shuffleDeck();
+   // this->shuffleDeck();
 }
 
 //Deal a card from the deck
 Card *Deck::dealCard(){
-    Card *d=new Card();
+    Card *d=new Card;
     d=aDeck.back();
     aDeck.pop_back();
     return d;

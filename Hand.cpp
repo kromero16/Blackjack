@@ -44,3 +44,8 @@ void Hand::addCard(Card *c){
     m_hand.push_back(c);
 }
 
+Hand::~Hand() {
+   
+}
+
+

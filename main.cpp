@@ -24,19 +24,25 @@ int main(int argc, char** argv) {
     Dealer house;
     string ch;
     
-    //Print both user's hands
-    cout<<"Your Hand: ";
-    user.prntHand();
-    cout<<" \n\n";
-    cout<<"Hand Score: "<<user.getTotScore();
-    cout<<"\n\n";
-    cout<<"\nDealer Hand: ";
-    house.prntDealerHand();
-    cout<<"\n\n";
-    cout<<"House Score: "<<house.getTotScore();
-    cout<<"\n\n";
+    cout<<"User Deck: \n";
+    user.viewDeck();
     
-    if(user.winBJ()){
+    cout<<"\n\nPrinting Dealer's Deck: \n";
+    house.viewDeck();
+    
+    user.firstDeal();
+    cout<<"\n\nUser Cards: \n";
+    user.prntHand();
+    
+    cout<<"\n\nUser Deck after dealing: \n";
+    user.viewDeck();
+    
+    cout<<"\n\nDealer Deck after dealing: \n";
+    house.viewDeck();
+    
+    
+    
+    /*if(user.winBJ()){
         cout<<"You won!\n";
     }
     else if(house.winBJ()){
@@ -59,7 +65,7 @@ int main(int argc, char** argv) {
             cout<<"Hand Total after hitting: "<<user.getTotScore()<<"\n\n";
          
         }
-    }
+    }*/
             
     
 

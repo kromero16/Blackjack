@@ -26,6 +26,9 @@ public:
     //Constructor
     Hand();
     
+    //Deconstructor
+    ~Hand();
+    
     //Accessors
     void printHand();
     int getNumCards(){return m_hand.size();}
