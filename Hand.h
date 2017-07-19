@@ -20,7 +20,7 @@ using namespace std;
 class Hand{
 private:
     vector<Card *> m_hand;
-    int handTotal=0;
+    int handTotal;
     
 public:
     //Constructor

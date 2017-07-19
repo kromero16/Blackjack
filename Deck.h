@@ -12,6 +12,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <utility>
+#include <memory>
 using namespace std;
 
 //User Libraries

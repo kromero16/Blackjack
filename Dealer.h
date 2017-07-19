@@ -30,6 +30,9 @@ public:
     //Print dealer hand
     void prntDealerHand();
     
+    //Print deck
+    void prntHouseDeck();
+    
     
 };
 

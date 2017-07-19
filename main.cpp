@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Kevin Romero
- *
+ * Purpose: Main Implementation of Blackjack Game
  * Created on June 28, 2017, 8:43 PM
  */
 
@@ -12,33 +12,44 @@
 using namespace std;
 
 //User Libraries
+#include "Player.h"
+#include "Deck.h"
 #include "Dealer.h"
 
 //Function Prototypes
-void toUpper(string &);
+void toUpper(string &);     //converts user input to uppercase
 
 //Begin Execution
 int main(int argc, char** argv) {
     //Create player and house
+    //Deck aDeck;
     Player user;
     Dealer house;
     string ch;
     
-    cout<<"User Deck: \n";
+    cout<<"\n\nOriginal Deck: \n";
     user.viewDeck();
+    cout<<"\n\n";
     
-    cout<<"\n\nPrinting Dealer's Deck: \n";
+    cout<<"\n\nDealer Deck \n\n";
     house.viewDeck();
     
+    cout<<"\n\nDealing First Round: \n\n";
     user.firstDeal();
-    cout<<"\n\nUser Cards: \n";
+    
+    cout<<"\n\nUser's Hand: ";
     user.prntHand();
+    cout<<"\n\n";
+    cout<<"User Hand Value: "<<user.getTotScore()<<"\n\n";
     
-    cout<<"\n\nUser Deck after dealing: \n";
-    user.viewDeck();
+    cout<<"\n\nHouse Dealing: \n\n";
+    house.firstDeal();
     
-    cout<<"\n\nDealer Deck after dealing: \n";
-    house.viewDeck();
+    cout<<"\n\nHouse Hand: \n\n";
+    house.prntDealerHand();
+    cout<<"Dealer Hand Value: "<<house.getTotScore()<<"\n\n";
+    
+  
     
     
     

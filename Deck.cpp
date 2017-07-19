@@ -11,7 +11,7 @@
 //Implement Constructor
 Deck::Deck(){
     this->fillDeck();
-   // this->shuffleDeck();
+    this->shuffleDeck();
 }
 
 //Deal a card from the deck
@@ -59,5 +59,5 @@ void Deck::fillDeck(){
 
 //Implement Deconstructor
 Deck::~Deck(){
-    delete aCard;
+    //delete aCard;
 }

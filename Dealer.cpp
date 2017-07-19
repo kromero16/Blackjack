@@ -11,13 +11,18 @@
 #include "Dealer.h"
 
 //Implement default constructor
-Dealer::Dealer() : Player(){
-   
+Dealer::Dealer() : Player() {
+    this->aDeck = Player::aDeck;
 }
 
 //Print dealer hand
 void Dealer::prntDealerHand(){
     aHand.printHand();
+}
+
+//Print dealer deck
+void Dealer::prntHouseDeck(){
+    Player::viewDeck();
 }
 
 //Implement gameplay

@@ -12,7 +12,6 @@
 
 //Implement Default Constructor
 Player::Player(){
-    //this->firstDeal();
     this->isBust();
 }
 

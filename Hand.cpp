@@ -18,9 +18,12 @@ Hand::Hand(){
 //Calculate hand total
 int Hand::getHandTotal(){
     vector<Card *>::const_iterator it=m_hand.begin();
+    int n=0;
+    
     for(it;it!=m_hand.end();++it){
-        handTotal+=(*it)->getCardVal((*it)->getFace());
+        n+=(*it)->getCardVal((*it)->getFace());
     }
+    handTotal=n;
     return handTotal;
 }
 
