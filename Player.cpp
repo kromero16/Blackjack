@@ -15,6 +15,12 @@ Player::Player(){
     this->isBust();
 }
 
+//Copy deck
+Player::Player(Deck *d){
+    this->aDeck = d;
+    this->isBust();
+}
+
 //default win
 bool Player::winBJ(){
     return (this->aHand.getHandTotal()==21 && this->aHand.getNumCards() == 2);
@@ -39,13 +45,13 @@ void Player::prntHand(){
 
 //Implement Constructor
 void Player::firstDeal(){
-    aHand.initDraw(this->aDeck.dealCard(),this->aDeck.dealCard());
+    aHand.initDraw(aDeck->dealCard(),aDeck->dealCard());
 }
 
 void Player::hit(){
-    aHand.addCard(this->aDeck.dealCard());
+    aHand.addCard(this->aDeck->dealCard());
 }
 
 void Player::viewDeck(){
-    aDeck.prntVecOfCards();
+    aDeck->prntVecOfCards();
 }

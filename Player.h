@@ -18,7 +18,7 @@
 //Create player class
 class Player{
 protected:
-    Deck aDeck;
+    Deck *aDeck = new Deck();
     Hand aHand;
     bool bust;
     
@@ -27,6 +27,7 @@ public:
     Player();
     
     //Constructor
+    Player(Deck *);
     
     //Mutators
     void hit();

@@ -12,7 +12,7 @@
 
 //Implement default constructor
 Dealer::Dealer() : Player() {
-    this->aDeck = Player::aDeck;
+    
 }
 
 //Print dealer hand

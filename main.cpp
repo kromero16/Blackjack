@@ -22,35 +22,30 @@ void toUpper(string &);     //converts user input to uppercase
 //Begin Execution
 int main(int argc, char** argv) {
     //Create player and house
-    //Deck aDeck;
-    Player user;
-    Dealer house;
-    string ch;
+    Deck *aDeck = new Deck();
+    Player user(aDeck);
+    //Dealer house(aDeck);
+    string ch;  
     
-    cout<<"\n\nOriginal Deck: \n";
+    user.firstDeal();
+    //house.firstDeal();
+    
+    cout<<"User's Hand: \n";
+    user.prntHand();
+    cout<<"\n\n";
+   
+    
+    cout<<"\nDefault Deck: \n";
+    aDeck->prntVecOfCards();
+    cout<<"\n\n";
+    
+    cout<<"\nUser Deck\n";
     user.viewDeck();
     cout<<"\n\n";
     
-    cout<<"\n\nDealer Deck \n\n";
-    house.viewDeck();
-    
-    cout<<"\n\nDealing First Round: \n\n";
-    user.firstDeal();
-    
-    cout<<"\n\nUser's Hand: ";
-    user.prntHand();
-    cout<<"\n\n";
-    cout<<"User Hand Value: "<<user.getTotScore()<<"\n\n";
-    
-    cout<<"\n\nHouse Dealing: \n\n";
-    house.firstDeal();
-    
-    cout<<"\n\nHouse Hand: \n\n";
-    house.prntDealerHand();
-    cout<<"Dealer Hand Value: "<<house.getTotScore()<<"\n\n";
-    
-  
-    
+    //cout<<"House Hand: \n";
+    //house.prntDealerHand();
+    //cout<<"\n\n";
     
     
     /*if(user.winBJ()){

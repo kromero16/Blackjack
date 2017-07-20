@@ -27,7 +27,7 @@ public:
     //Handle game logic
     void game(Player);
     
-    //Print dealer hand
+    //Print dealer hand 
     void prntDealerHand();
     
     //Print deck
