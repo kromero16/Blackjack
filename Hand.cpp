@@ -23,7 +23,7 @@ int Hand::getHandTotal(){
     for(it;it!=m_hand.end();++it){
         n+=(*it)->getCardVal((*it)->getFace());
     }
-    handTotal=n;
+    handTotal = n;
     return handTotal;
 }
 

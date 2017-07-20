@@ -11,7 +11,7 @@
 #include "Dealer.h"
 
 //Implement default constructor
-Dealer::Dealer() : Player() {
+Dealer::Dealer(Deck *d) : Player(d) {
     
 }
 

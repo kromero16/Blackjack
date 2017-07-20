@@ -24,31 +24,20 @@ int main(int argc, char** argv) {
     //Create player and house
     Deck *aDeck = new Deck();
     Player user(aDeck);
-    //Dealer house(aDeck);
-    string ch;  
+    Dealer house(aDeck);
+    string ch;
     
-    user.firstDeal();
-    //house.firstDeal();
-    
-    cout<<"User's Hand: \n";
+    cout<<"\nYour Hand: ";
     user.prntHand();
-    cout<<"\n\n";
-   
+    cout<<"\n";
+    cout<<"Hand Total: "<<user.getTotScore()<<"\n";
     
-    cout<<"\nDefault Deck: \n";
-    aDeck->prntVecOfCards();
-    cout<<"\n\n";
+    cout<<"\n\nHouse Hand: ";
+    house.prntDealerHand();
+    cout<<"\n";
+    cout<<"Dealer Total: "<<house.getTotScore()<<"\n";
     
-    cout<<"\nUser Deck\n";
-    user.viewDeck();
-    cout<<"\n\n";
-    
-    //cout<<"House Hand: \n";
-    //house.prntDealerHand();
-    //cout<<"\n\n";
-    
-    
-    /*if(user.winBJ()){
+    if(user.winBJ()){
         cout<<"You won!\n";
     }
     else if(house.winBJ()){
@@ -65,13 +54,15 @@ int main(int argc, char** argv) {
             if(ch == "H"){
                 user.hit();
             }
-            cout<<"You hand after hitting: ";
+            cout<<"Your hand after hitting: ";
             user.prntHand();
             cout<<"\n\n";
             cout<<"Hand Total after hitting: "<<user.getTotScore()<<"\n\n";
-         
+            if(user.isBust()){
+                cout<<"You went over 21!\n";
+            }
         }
-    }*/
+    }
             
     
 

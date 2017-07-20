@@ -16,8 +16,8 @@ Deck::Deck(){
 
 //Deal a card from the deck
 Card *Deck::dealCard(){
-    Card *d=new Card;
-    d=aDeck.back();
+    Card *d = new Card;
+    d = aDeck.back();
     aDeck.pop_back();
     return d;
 }

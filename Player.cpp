@@ -13,12 +13,14 @@
 //Implement Default Constructor
 Player::Player(){
     this->isBust();
+    this->firstDeal();
 }
 
 //Copy deck
 Player::Player(Deck *d){
     this->aDeck = d;
     this->isBust();
+    this->firstDeal();
 }
 
 //default win
@@ -49,7 +51,7 @@ void Player::firstDeal(){
 }
 
 void Player::hit(){
-    aHand.addCard(this->aDeck->dealCard());
+    aHand.addCard(aDeck->dealCard());
 }
 
 void Player::viewDeck(){

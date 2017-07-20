@@ -22,7 +22,7 @@ private:
    
 public:
     //Default Constructor
-    Dealer();
+    Dealer(Deck *);
     
     //Handle game logic
     void game(Player);
