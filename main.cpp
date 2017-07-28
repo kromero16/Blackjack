@@ -15,19 +15,24 @@ using namespace std;
 #include "Player.h"
 #include "Deck.h"
 #include "Dealer.h"
+#include "Shoe.h"
 
 //Function Prototypes
 void toUpper(string &);     //converts user input to uppercase
 
 //Begin Execution
 int main(int argc, char** argv) {
-    //Create player and house
-    Deck *aDeck = new Deck();
-    Player user(aDeck);
-    Dealer house(aDeck);
+    //Create player and house 
+    Shoe *aShoe = new Shoe();
+    aShoe->printShoe();
+    cout<<"Elements in the Shoe: "<<aShoe->getShoeSize()<<" \n";
+    
+   // Deck *aDeck = new Deck();
+   // Player user(aDeck);
+   // Dealer house(aDeck);
     string ch;
     
-    cout<<"\nYour Hand: ";
+    /*cout<<"\nYour Hand: ";
     user.prntHand();
     cout<<"\n";
     cout<<"Hand Total: "<<user.getTotScore()<<"\n";
@@ -54,6 +59,10 @@ int main(int argc, char** argv) {
             if(ch == "H"){
                 user.hit();
             }
+            else if(ch =="S"){
+                house.game(user);
+                break;
+            }
             cout<<"Your hand after hitting: ";
             user.prntHand();
             cout<<"\n\n";
@@ -61,8 +70,8 @@ int main(int argc, char** argv) {
             if(user.isBust()){
                 cout<<"You went over 21!\n";
             }
-        }
-    }
+     }
+    }*/
             
     
 

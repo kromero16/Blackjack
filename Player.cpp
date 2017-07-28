@@ -50,10 +50,12 @@ void Player::firstDeal(){
     aHand.initDraw(aDeck->dealCard(),aDeck->dealCard());
 }
 
+//take another card
 void Player::hit(){
     aHand.addCard(aDeck->dealCard());
 }
 
+//Print the deck
 void Player::viewDeck(){
     aDeck->prntVecOfCards();
 }

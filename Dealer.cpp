@@ -26,9 +26,9 @@ void Dealer::prntHouseDeck(){
 }
 
 //Implement gameplay
-void Dealer::game(Player p){
+void Dealer::game(Player &p){
     while(aHand.getHandTotal() <= 21){
-        aHand.printHand();
+        this->prntDealerHand();
         cout<<"\n";
         
         if(aHand.getHandTotal() > p.getTotScore() && aHand.getHandTotal() <= 21){
@@ -39,10 +39,11 @@ void Dealer::game(Player p){
             cout<<"Tied! \n";
             return;
         }
-        this->hit();
+  
     }
     if(aHand.getHandTotal() > 21){
         cout<<"House Busted! You Won! \n";
         return;
     }
 }
+    

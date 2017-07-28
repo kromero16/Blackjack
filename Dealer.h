@@ -25,7 +25,7 @@ public:
     Dealer(Deck *);
     
     //Handle game logic
-    void game(Player);
+    void game(Player&);
     
     //Print dealer hand 
     void prntDealerHand();

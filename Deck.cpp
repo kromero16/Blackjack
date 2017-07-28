@@ -11,7 +11,7 @@
 //Implement Constructor
 Deck::Deck(){
     this->fillDeck();
-    this->shuffleDeck();
+    
 }
 
 //Deal a card from the deck

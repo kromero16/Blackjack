@@ -6,6 +6,7 @@
  */
 
 //System Libraries
+#include <vector>
 
 //User Libraries
 #include "Hand.h"
