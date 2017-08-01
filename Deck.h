@@ -23,9 +23,9 @@ using namespace std;
 class Deck{
 private:
     //Declare size variables
-    static const int DECK_S=52;
-    static const int SUIT_S=4;
-    static const int FACE_S=13;
+    static const int DECK_S = 52;
+    static const int SUIT_S = 4;
+    static const int FACE_S = 13;
     
     //Card to build deck
     Card *aCard;

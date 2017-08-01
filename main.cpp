@@ -25,7 +25,6 @@ int main(int argc, char** argv) {
     //Create player and house 
     Shoe *aShoe = new Shoe();
     aShoe->printShoe();
-    cout<<"Elements in the Shoe: "<<aShoe->getShoeSize()<<" \n";
     
    // Deck *aDeck = new Deck();
    // Player user(aDeck);

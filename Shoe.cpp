@@ -12,25 +12,32 @@
 //Implement constructor
 Shoe::Shoe(){
     this->fillShoe();
+    this->shuffleShoe();
+}
+
+//Shuffle function
+void Shoe::shuffleShoe(){
+    std::random_shuffle(aShoe.begin(),aShoe.end());
 }
 
 //Implement fill function
 void Shoe::fillShoe(){
     for(int i=0;i<NUM_DECKS;i++){
-        aDeck = new Deck();
-        aShoe.push_back(aDeck);
+        for(int k=1;k<FACE_S+1;k++){
+            for(int j=1;j<SUIT_S+1;j++){
+                aCard = new Card(static_cast<FACE>(k), static_cast<SUIT>(j));
+                aShoe.push_back(aCard);
+            }
+        }
     }
 }
 
 //Implement print function 
 void Shoe::printShoe(){
-    vector<Deck *>::const_iterator it=aShoe.begin();
+    vector<Card *>::const_iterator it=aShoe.begin();
     for(it;it!=aShoe.end();++it){
-        (*it)->prntVecOfCards();
+        cout<<(*it)->getGivenCard((*it)->getFace(),(*it)->getSuit());
+        cout<<"\n";
     }
 }
 
-//implement shuffle
-void Shoe::shuffleShoe(){
-    
-}

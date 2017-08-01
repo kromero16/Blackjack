@@ -24,14 +24,18 @@
 
 //Create shoe object
 class Shoe{
-private:   
-    static const int NUM_DECKS = 6;
+private: 
+    //Declare size variables
+    static const int DECK_S = 52;
+    static const int SUIT_S = 4;
+    static const int FACE_S = 13;
+    static const int NUM_DECKS = 2;
     
     //deck to fill shoe
-    Deck *aDeck;
+    Card *aCard;
     
-    //vector to hold decks
-    vector<Deck *> aShoe;
+    //vector of cards
+    vector<Card *> aShoe;
    
 public: 
     //Constructor
@@ -42,7 +46,6 @@ public:
     
     //Accessors
     void printShoe();
-    int getShoeSize(){return aShoe.size();}
     
    
     //Mutators
