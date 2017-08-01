@@ -12,7 +12,7 @@
 
 //User Libraries
 #include "Card.h"
-#include "Deck.h"
+#include "Shoe.h"
 #include "Hand.h"
 #include "Player.h"
 
@@ -22,7 +22,7 @@ private:
    
 public:
     //Default Constructor
-    Dealer(Deck *);
+    Dealer(Shoe *);
     
     //Handle game logic
     void game(Player&);

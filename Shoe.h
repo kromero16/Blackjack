@@ -29,7 +29,7 @@ private:
     static const int DECK_S = 52;
     static const int SUIT_S = 4;
     static const int FACE_S = 13;
-    static const int NUM_DECKS = 2;
+    static const int NUM_DECKS = 1;
     
     //deck to fill shoe
     Card *aCard;
@@ -46,6 +46,7 @@ public:
     
     //Accessors
     void printShoe();
+    Card *dealCard();
     
    
     //Mutators

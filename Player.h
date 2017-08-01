@@ -13,12 +13,12 @@
 //User Libraries
 #include "Hand.h"
 #include "Card.h"
-#include "Deck.h"
+#include "Shoe.h"
 
 //Create player class
 class Player{
 protected:
-    Deck *aDeck = new Deck();
+    Shoe *aShoe = new Shoe();
     Hand aHand;
     bool bust;
     
@@ -27,7 +27,7 @@ public:
     Player();
     
     //Constructor
-    Player(Deck *);
+    Player(Shoe *);
     
     //Mutators
     void hit();
@@ -38,7 +38,7 @@ public:
     const int getTotScore();
     bool isBust();
     bool winBJ();
-    void viewDeck();
+    void viewShoe();
     
 };
 

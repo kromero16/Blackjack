@@ -11,7 +11,7 @@
 #include "Dealer.h"
 
 //Implement default constructor
-Dealer::Dealer(Deck *d) : Player(d) {
+Dealer::Dealer(Shoe *s) : Player(s) {
     
 }
 
@@ -22,7 +22,7 @@ void Dealer::prntDealerHand(){
 
 //Print dealer deck
 void Dealer::prntHouseDeck(){
-    Player::viewDeck();
+    Player::viewShoe();
 }
 
 //Implement gameplay

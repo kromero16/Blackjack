@@ -17,10 +17,10 @@ Player::Player(){
 }
 
 //Copy deck
-Player::Player(Deck *d){
-    this->aDeck = d;
+Player::Player(Shoe *s){
+    this->aShoe = s;
     this->isBust();
-    this->firstDeal();
+    //this->firstDeal();
 }
 
 //default win
@@ -47,15 +47,15 @@ void Player::prntHand(){
 
 //Implement Constructor
 void Player::firstDeal(){
-    aHand.initDraw(aDeck->dealCard(),aDeck->dealCard());
+    aHand.initDraw(aShoe->dealCard(),aShoe->dealCard());
 }
 
 //take another card
 void Player::hit(){
-    aHand.addCard(aDeck->dealCard());
+    aHand.addCard(aShoe->dealCard());
 }
 
 //Print the deck
-void Player::viewDeck(){
-    aDeck->prntVecOfCards();
+void Player::viewShoe(){
+    aShoe->printShoe();
 }

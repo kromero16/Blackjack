@@ -12,7 +12,15 @@
 //Implement constructor
 Shoe::Shoe(){
     this->fillShoe();
-    this->shuffleShoe();
+    //this->shuffleShoe();
+}
+
+//Implement deal function
+Card *Shoe::dealCard(){
+    Card *c = new Card();
+    c = aShoe.back();
+    aShoe.pop_back();
+    return c;
 }
 
 //Shuffle function
@@ -28,7 +36,7 @@ void Shoe::fillShoe(){
                 aCard = new Card(static_cast<FACE>(k), static_cast<SUIT>(j));
                 aShoe.push_back(aCard);
             }
-        }
+        } 
     }
 }
 

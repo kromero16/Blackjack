@@ -21,15 +21,23 @@ using namespace std;
 void toUpper(string &);     //converts user input to uppercase
 
 //Begin Execution
-int main(int argc, char** argv) {
-    //Create player and house 
+int main(int argc, char** argv) {   
     Shoe *aShoe = new Shoe();
-    aShoe->printShoe();
-    
-   // Deck *aDeck = new Deck();
-   // Player user(aDeck);
-   // Dealer house(aDeck);
+    Player user(aShoe);
+    //Dealer house(aShoe);
     string ch;
+    
+    cout<<"Default Shoe: \n\n";
+    aShoe->printShoe();
+    cout<<"\n\n";
+    
+    /*cout<<"\n\nUser Shoe: \n\n";
+    user.viewShoe();
+    cout<<"\n\n";
+    
+    cout<<"\n\nDealer Shoe: \n\n";
+    house.prntHouseDeck();
+    cout<<"\n\n";*/
     
     /*cout<<"\nYour Hand: ";
     user.prntHand();
