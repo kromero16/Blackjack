@@ -29,7 +29,7 @@ private:
     static const int DECK_S = 52;
     static const int SUIT_S = 4;
     static const int FACE_S = 13;
-    static const int NUM_DECKS = 1;
+    static const int NUM_DECKS = 6;
     
     //deck to fill shoe
     Card *aCard;
@@ -40,9 +40,6 @@ private:
 public: 
     //Constructor
     Shoe();
-    
-    //Deconstructor
-    ~Shoe();
     
     //Accessors
     void printShoe();

@@ -20,7 +20,7 @@ Player::Player(){
 Player::Player(Shoe *s){
     this->aShoe = s;
     this->isBust();
-    //this->firstDeal();
+    this->firstDeal();
 }
 
 //default win

@@ -39,6 +39,9 @@ void Dealer::game(Player &p){
             cout<<"Tied! \n";
             return;
         }
+        if(aHand.getHandTotal() < p.getTotScore() && aHand.getHandTotal() <=21){
+            while()
+        }
   
     }
     if(aHand.getHandTotal() > 21){

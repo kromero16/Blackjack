@@ -13,7 +13,6 @@ using namespace std;
 
 //User Libraries
 #include "Player.h"
-#include "Deck.h"
 #include "Dealer.h"
 #include "Shoe.h"
 
@@ -24,22 +23,10 @@ void toUpper(string &);     //converts user input to uppercase
 int main(int argc, char** argv) {   
     Shoe *aShoe = new Shoe();
     Player user(aShoe);
-    //Dealer house(aShoe);
+    Dealer house(aShoe);
     string ch;
     
-    cout<<"Default Shoe: \n\n";
-    aShoe->printShoe();
-    cout<<"\n\n";
-    
-    /*cout<<"\n\nUser Shoe: \n\n";
-    user.viewShoe();
-    cout<<"\n\n";
-    
-    cout<<"\n\nDealer Shoe: \n\n";
-    house.prntHouseDeck();
-    cout<<"\n\n";*/
-    
-    /*cout<<"\nYour Hand: ";
+    cout<<"\nYour Hand: ";
     user.prntHand();
     cout<<"\n";
     cout<<"Hand Total: "<<user.getTotScore()<<"\n";
@@ -78,7 +65,7 @@ int main(int argc, char** argv) {
                 cout<<"You went over 21!\n";
             }
      }
-    }*/
+    }
             
     
 

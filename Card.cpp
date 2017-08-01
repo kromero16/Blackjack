@@ -40,7 +40,7 @@ int Card::getCardVal(FACE const& f){
 //return given card as string
 std::string Card::getGivenCard(const FACE& f, const SUIT& s){
     std::string str;
-    str=this->toString(f)+" of "+this->toString(s);
+    str = this->toString(f) + " of " + this->toString(s);
     return str;
 }
 

@@ -12,7 +12,8 @@
 //Implement constructor
 Shoe::Shoe(){
     this->fillShoe();
-    //this->shuffleShoe();
+    this->shuffleShoe();
+    this->shuffleShoe();
 }
 
 //Implement deal function
