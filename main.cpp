@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
     }
     else{
         while(!user.isBust()){
-            cout<<"Would You Like to Hit or Stand?\n\n";
+            cout<<"\nWould You Like to Hit or Stand?\n\n";
             cout<<"Enter an H for Hit or S for Stand.\n";
             cin>>ch;
             toUpper(ch);
@@ -52,6 +52,11 @@ int main(int argc, char** argv) {
             
             if(ch == "H"){
                 user.hit();
+                if(user.getTotScore() == 21){
+                    cout<<"\nYou Won!!\n";
+                    cout<<"Your Score was: "<<user.getTotScore()<<"\n";
+                    break;
+                }
             }
             else if(ch =="S"){
                 house.game(user);
@@ -61,6 +66,7 @@ int main(int argc, char** argv) {
             user.prntHand();
             cout<<"\n\n";
             cout<<"Hand Total after hitting: "<<user.getTotScore()<<"\n\n";
+            
             if(user.isBust()){
                 cout<<"You went over 21!\n";
             }
